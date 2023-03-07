@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         }
         {
-          errors ? <div className='bg-red-500/20 text-red-500 border-4 border-red-500 px-5 py-2 my-4 rounded-xl'>{errors}</div> : ''
+          errors ? <div className='bg-red-500/20 text-red-500 border-4 border-red-500 px-5 py-2 my-4 rounded-xl text-xs'>{errors}</div> : ''
         }
         {
           session &&
@@ -92,16 +92,12 @@ export default function Home() {
             e.preventDefault()
             handleSubmit()
 
-          }} className="w-11/12 flex flex-row gap-2  h-[50px]  lg:w-5/12 ">
+          }} className="w-10/12 flex flex-col lg:flex-row gap-2    lg:w-5/12 ">
 
-            <input value={value} onChange={(e) => setValue(e.target.value)} placeholder="Paste the URL to shorten" className=" bg-white/40 border-2 border-black/20 placeholder:text-black/70 flex-1  px-4 backdrop-blur-md rounded-3xl  outline-none" />
-           
-            <button
-            >
+            <input value={value} onChange={(e) => setValue(e.target.value)} placeholder="Paste the URL to shorten" className=" bg-white/40 border-2 border-black/20 placeholder:text-black/70 flex-1 py-3 px-4 backdrop-blur-md rounded-3xl  outline-none" />
 
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" bg-black/20 rounded-full w-fit hover:scale-95 duration-300  hover:rotate-180 hover:text-white hover:bg-black/80  p-3 h-full ">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-              </svg>
+
+            <button className=" bg-black/60 text-white rounded-full w-fit px-7 text-center lg:w-fit hover:scale-95 duration-300   hover:text-white hover:bg-black/80  p-3 h-12  flex  flex-row">Shorten it
             </button>
 
 
